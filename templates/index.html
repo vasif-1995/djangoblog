@@ -1,0 +1,25 @@
+{%extends "layout.html" %}
+
+
+{%block body %}
+
+<div class="jumbotron text-center">
+
+<h3>Vasifin səhifəsinə xoş gəlmişsiniz!</h3>
+<p>Burada hər şeyi öyrənəcəksiniz</p>
+
+
+</div>
+<p>
+{% if request.user.is_authenticated %}
+    <h4>Səhifəyə giriş edildi, {{request.user.username}}</h4>
+
+{% else %}
+    <h4>Səhifəyə giriş edilməyib</h4>
+
+{% endif %}
+
+</p>
+
+
+{% endblock body %}
